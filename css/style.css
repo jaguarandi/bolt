@@ -1,0 +1,306 @@
+@charset "UTF-8";
+
+body {
+  font-family: "Raleway";
+}
+
+header {
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+
+.inner {
+  width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header-inner {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fa-bolt {
+  color: #4e4e4e
+}
+
+.contact {
+  display: inline-block;
+  color: #fff;
+  background-color: #74cfae;
+  padding: 14px 12px;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.contact:hover {
+  color:#333;
+}
+
+.theme {
+  background-color: #f2f2f2;
+  padding-top: 70px;
+}
+
+.theme-inner {
+  padding: 250px 0;
+}
+
+.title {
+  color: #74cfae;
+  font-size: 90px;
+  font-weight: 700;
+}
+
+.sub-title {
+  color: #c0c0c0;
+  font-size: 30px;
+  margin-top: 20px;
+  font-weight: 400;
+}
+
+.about {
+  background-color: #74cfae;
+  color: #f2f2f2;
+}
+
+.about-inner {
+  display: flex;
+  justify-content: center;
+  padding: 50px 105px 0 105px;
+  box-sizing: border-box;
+}
+
+.about__text {
+  margin-left: 170px;
+  margin-top: 25px;
+}
+
+.heading {
+  font-size: 24px;
+}
+
+.sentence {
+  font-size: 20px;
+  font-family: "Lato";
+}
+
+.about__sentence {
+  margin-top: 35px;
+}
+
+.work {
+  background-color: #f2f2f2;
+  color: #4e4e4e;
+}
+
+.work-inner {
+  padding: 60px 0 70px 0;
+}
+
+.thumb-list {
+  margin: 40px 0 90px 0;
+  font-size: 0;
+}
+
+.thumb {
+  display: inline-block;
+  margin-left: 100px;
+  opacity: 0.7;
+  transition: .3s;
+}
+
+.thumb:hover {
+  opacity: 1;
+}
+
+.thumb:first-child, .thumb:nth-child(4) {
+  margin-left: 0;
+} 
+
+.thumb:nth-child(4), .thumb:nth-child(5), .thumb:nth-child(6) {
+  margin-top: 80px;
+}
+
+.work__sentence {
+  display: inline-block; 
+  width: 50%;
+}
+
+.email-link {
+  display: inline-block;
+  color: #fff;
+  background-color: #74cfae;
+  padding: 14px 20px;
+  font-size: 12px;
+  text-decoration: none;
+  margin-left: 90px;
+  vertical-align: top;
+}
+
+.skills {
+  background-color: #4e4e4e;
+  color: #f2f2f2;
+}
+
+.skills-inner {
+  padding: 70px 0 100px 0;
+}
+
+.parts {
+  margin-top: 50px;
+}
+
+.part {
+  margin-left: 180px;
+  display: inline-block;
+}
+
+.part:first-child {
+  margin-left: 0;
+}
+
+.text {
+  font-family: "Lato";
+}
+
+.part__text {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.nav {
+  background-color: #f2f2f2;
+}
+
+.nav-inner {
+  padding: 200px 0;
+}
+
+.icon-link {
+  color: #74cfae;
+  display: inline-block;
+  text-decoration: none;
+  width: 180px;
+  padding: 30px 0;
+  transition: .3s;
+}
+
+.icon-link:hover {
+  background-color: #fff;
+}
+
+footer {
+  background-color: #74cfae;
+  color: #f2f2f2;
+}
+
+.footer-inner {
+  background-color: #74cfae;
+  padding: 20px 0 25px 0;
+  text-align: right;
+}
+
+@media screen and (min-width: 1200px) {
+  .humberger {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .inner {
+    width: 97%;
+  }
+
+  .humberger {
+    display: none;
+  }
+
+  .about-inner {
+    display: block;
+    padding: 50px 0 25px 0;
+  }
+
+  .about__text {
+    margin: 0;
+    margin-top: 20px;
+  }
+
+  .thumb-list {
+    margin: 40px 0 80px 0;
+    font-size: 0;
+  }
+
+  .thumb {
+    display: block;
+    margin: 0;
+  }
+
+  .thumb:nth-child(5), .thumb:nth-child(6) {
+    margin: 0;
+  }
+
+  .work__sentence {
+    width: 100%;
+  }
+
+  .email-link {
+    margin: 40px 0 0 0;
+  }
+
+  .part {
+    margin: 88px 0 0 0;
+    display: block;
+  }
+
+  .part:first-child {
+    margin-top: 0;
+  }
+  
+}
+@media screen and (max-width: 767px) {
+  .contact {
+    display: none;
+  }
+
+  .humberger {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .humberger div {
+    height: 3px;
+    width: 28px;
+    background-color: #ddd;
+    border-radius: 4px;
+    margin-top: 5px;
+  }
+
+  .humberger div:first-child {
+    margin-top: 0;
+  }
+
+  .theme-inner {
+    padding: 160px 0 130px 0;
+  }
+
+  .title {
+    font-size: 80px;
+  }
+
+  .nav-inner {
+    padding: 50px 0;
+  }
+
+  .icon-link {
+    width: 100%;
+  }
+}
