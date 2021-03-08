@@ -27,13 +27,16 @@ header {
   color: #4e4e4e
 }
 
-.contact {
-  display: inline-block;
+.btn {
   color: #fff;
   background-color: #74cfae;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.contact {
   padding: 14px 12px;
   font-size: 12px;
-  text-decoration: none;
   font-weight: bold;
   transition: .3s;
 }
@@ -133,12 +136,8 @@ header {
 }
 
 .email-link {
-  display: inline-block;
-  color: #fff;
-  background-color: #74cfae;
   padding: 14px 20px;
   font-size: 12px;
-  text-decoration: none;
   margin-left: 90px;
   vertical-align: top;
 }
