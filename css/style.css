@@ -1,7 +1,11 @@
 @charset "UTF-8";
 
 body {
-  font-family: "Raleway";
+  font-family: "Lato";　/*Latoに修正*/
+}
+
+.raleway {
+  font-family: "Raleway";　/*見出しにRalewayを適用*/
 }
 
 header {
@@ -18,7 +22,7 @@ header {
 }
 
 .header-inner {
-  padding: 15px;
+  padding: 15px 0; /*左右のいらないpadding消去*/
   display: flex;
   justify-content: space-between;
 }
@@ -27,21 +31,22 @@ header {
   color: #4e4e4e
 }
 
-.btn {
+.button {
   color: #fff;
   background-color: #74cfae;
   display: inline-block;
   text-decoration: none;
+  transition: .3s;
 }
 
 .contact {
   padding: 14px 12px;
   font-size: 12px;
   font-weight: bold;
-  transition: .3s;
 }
 
-.contact:hover {
+/*content, emailまとめてホバー追加*/
+.button:hover {
   color:#333;
 }
 
@@ -81,7 +86,7 @@ header {
 
 .about__text {
   margin-left: 170px;
-  margin-top: 25px;
+  padding-top: 25px; /*paddingで幅を取る*/
 }
 
 .heading {
@@ -90,7 +95,6 @@ header {
 
 .sentence {
   font-size: 20px;
-  font-family: "Lato";
 }
 
 .about__sentence {
@@ -107,27 +111,39 @@ header {
 }
 
 .thumb-list {
-  padding: 40px 0 90px 0;
+  margin-top: 40px; /*他の要素があるのでmarginで幅を取る*/
   font-size: 0;
+}
+
+.list {
+  display: inline-block;
+}
+
+.thumb-content {
+  margin-left: 100px;
 }
 
 .thumb {
   display: inline-block;
-  margin-left: 100px;
   opacity: 0.7;
   transition: .3s;
 }
 
 .thumb:hover {
-  opacity: 1;
+  opacity: 1.0;
 }
 
-.thumb:first-child, .thumb:nth-child(4) {
+/*数式を使う*/
+.thumb-content:nth-child(3n+1) {
   margin-left: 0;
 } 
 
-.thumb:nth-child(4), .thumb:nth-child(5), .thumb:nth-child(6) {
+.thumb-content:nth-child(n+4) {
   margin-top: 80px;
+}
+
+.work__text {
+  margin-top: 90px; /*クラスで囲ってmargin-topをとる*/
 }
 
 .work__sentence {
@@ -148,27 +164,22 @@ header {
 }
 
 .skills-inner {
-  padding: 70px 0 100px 0;
+  padding: 70px 0 100px;　/*paddingをまとめる*/
 }
 
-.parts {
+.skill-list {
   margin-top: 50px;
 }
 
-.part {
+.skill-content {
   margin-left: 180px;
-  display: inline-block;
 }
 
-.part:first-child {
+.skill-content:first-child {
   margin-left: 0;
 }
 
-.text {
-  font-family: "Lato";
-}
-
-.part__text {
+.skill__text {
   margin-top: 20px;
   font-size: 16px;
 }
@@ -179,13 +190,15 @@ header {
 
 .nav-inner {
   padding: 200px 0;
+  font-size: 0; /*icon-link同士の余白を消す*/
 }
 
 .icon-link {
-  color: #74cfae;
   display: inline-block;
+  color: #74cfae;
   text-decoration: none;
-  width: 180px;
+  font-size: 45px;
+  width: 185px; /*横幅185pxに修正*/
   padding: 30px 0;
   transition: .3s;
 }
@@ -205,12 +218,15 @@ footer {
   text-align: right;
 }
 
+
+/*レスポンシブ(PC)*/
 @media screen and (min-width: 1200px) {
   .humberger {
     display: none;
   }
 }
 
+/*レスポンシブ(TAB)*/
 @media screen and (max-width: 1199px) {
   .inner {
     width: 97%;
@@ -235,13 +251,17 @@ footer {
     font-size: 0;
   }
 
-  .thumb {
+  .thumb-content {
     display: block;
     margin: 0;
   }
 
-  .thumb:nth-child(5), .thumb:nth-child(6) {
+  .thumb-content:nth-child(n+4) {
     margin: 0;
+  }
+
+  .thumb-content:nth-child(3n+4) {
+    margin-top: 80px;
   }
 
   .work__sentence {
@@ -252,16 +272,17 @@ footer {
     margin: 40px 0 0 0;
   }
 
-  .part {
+  .skill-content {
     margin: 88px 0 0 0;
     display: block;
   }
 
-  .part:first-child {
+  .skill-content:first-child {
     margin-top: 0;
   }
-  
 }
+
+/*レスポンシブ(SP)*/
 @media screen and (max-width: 767px) {
   .contact {
     display: none;
@@ -275,7 +296,7 @@ footer {
     cursor: pointer;
   }
 
-  .humberger div {
+  .humberger .line {
     height: 3px;
     width: 28px;
     background-color: #ddd;
@@ -283,7 +304,7 @@ footer {
     margin-top: 5px;
   }
 
-  .humberger div:first-child {
+  .humberger .line:first-child {
     margin-top: 0;
   }
 
@@ -297,6 +318,10 @@ footer {
 
   .nav-inner {
     padding: 50px 0;
+  }
+
+  .icon-content {
+    display: block;
   }
 
   .icon-link {
