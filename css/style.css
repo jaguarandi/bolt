@@ -5,7 +5,7 @@ body {
 }
 
 .raleway {
-  font-family: "Raleway";　/*見出しにRalewayを適用*/
+  font-family: "Raleway"; /*見出しにRaleway適用*/
 }
 
 header {
@@ -164,7 +164,7 @@ header {
 }
 
 .skills-inner {
-  padding: 70px 0 100px;　/*paddingをまとめる*/
+  padding: 70px 0 100px; /*paddingをまとめる*/
 }
 
 .skill-list {
