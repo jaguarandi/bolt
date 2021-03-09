@@ -12,7 +12,13 @@ header {
   background-color: #fff;
   width: 100%;
   position: fixed;
-  z-index: 1;
+  left: 0; /*fixedの後に2方向に指定追加*/
+  top: 0; /*fixedの後に2方向に指定追加*/
+  z-index: 100;/*z-indexを適切な値に修正*/
+}
+/*aタグにdisplayプロパティを当てる*/
+a {
+  display: inline-block;
 }
 
 .inner {
@@ -26,8 +32,8 @@ header {
   display: flex;
   justify-content: space-between;
 }
-
-.fa-bolt {
+/*ボルトアイコンにオリジナルクラスを指定する*/
+.bolt-icon {
   color: #4e4e4e
 }
 
@@ -124,7 +130,6 @@ header {
 }
 
 .thumb {
-  display: inline-block;
   opacity: 0.7;
   transition: .3s;
 }
@@ -194,7 +199,6 @@ header {
 }
 
 .icon-link {
-  display: inline-block;
   color: #74cfae;
   text-decoration: none;
   font-size: 45px;
@@ -242,8 +246,8 @@ footer {
   }
 
   .about__text {
-    margin: 0;
-    margin-top: 20px;
+    padding-top: 0; /*PC画面のpaddingを打ち消す*/
+    margin: 20px 0 0 0; /*marginを一つにまとめる*/
   }
 
   .thumb-list {
